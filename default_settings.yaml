@@ -1,3 +1,4 @@
+# Copy this file to settings.yaml and then make changes. The app will not read this template file.
 AWS:
   AWS_ACCESS_KEY_ID: <Your Key ID Here>
   AWS_SECRET_ACCESS_KEY: <Your Key Here>

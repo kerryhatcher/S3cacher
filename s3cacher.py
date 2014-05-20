@@ -28,13 +28,18 @@ conn = boto.connect_s3(AWS_ACCESS_KEY_ID,
 
 bucket = conn.create_bucket(bucket_name,
         location=boto.s3.connection.Location.DEFAULT)
-
+#############
+#AWS CONFIGS#
+#############
 
 
 
 
 class Cacher:
         """Upload html to s3"""
+        def __init__(self, localfilename, inputurl):
+            pass
+
         @staticmethod
         def upload(localfilename, inputurl):
             targeturl = urllib.urlopen(inputurl)
@@ -55,5 +60,24 @@ class Cacher:
                 cb=percent_cb, num_cb=10)
             os.remove(localfilename)
 
+        def download(self, localfilename, inputurl):
+            targeturl = urllib.urlopen(inputurl)
+            localFile = open(localfilename, 'w')
+            localFile.write(targeturl.read())
+            localFile.close()
 
 
+import unittest
+
+
+class FooTests(unittest.TestCase):
+
+    def testupload(self):
+        self.failUnless()
+
+
+def main():
+    unittest.main()
+
+if __name__ == '__main__':
+    main()
