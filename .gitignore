@@ -52,3 +52,9 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Pycharm stuff
+.idea/
+
+
+#sensitive stuff
+settings.yaml
