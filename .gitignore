@@ -58,3 +58,7 @@ docs/_build/
 
 #sensitive stuff
 settings.yaml
+
+
+#virtenv
+.env/
