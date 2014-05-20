@@ -67,17 +67,3 @@ class Cacher:
             localFile.close()
 
 
-import unittest
-
-
-class FooTests(unittest.TestCase):
-
-    def testupload(self):
-        self.failUnless()
-
-
-def main():
-    unittest.main()
-
-if __name__ == '__main__':
-    main()

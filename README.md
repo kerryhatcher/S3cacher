@@ -23,5 +23,5 @@ import s3cacher
 
 cache = s3cacher.Cacher
 
-cache.upload("test.html","http://www.co.bibb.ga.us/VotersAuto/ExternalVoters/ScrollingResults.asp")
+cache.upload("cachedResults.html","http://www.myweb.us/Results.asp")
 ```
