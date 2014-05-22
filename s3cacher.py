@@ -37,7 +37,7 @@ bucket = conn.create_bucket(bucket_name,
 
 class Cacher:
         """Upload html to s3"""
-        def __init__(self, localfilename, inputurl):
+        def __init__(self):
             pass
 
         @staticmethod
@@ -59,11 +59,3 @@ class Cacher:
             s3key.set_contents_from_filename(localfilename,
                 cb=percent_cb, num_cb=10)
             os.remove(localfilename)
-
-        def download(self, localfilename, inputurl):
-            targeturl = urllib.urlopen(inputurl)
-            localFile = open(localfilename, 'w')
-            localFile.write(targeturl.read())
-            localFile.close()
-
-
